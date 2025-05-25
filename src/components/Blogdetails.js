@@ -1,8 +1,8 @@
-const blogDetails= () =>{
+const BlogDetails = () =>{
     return(
         <div>
         <h1>this is my blog detail</h1>
         </div>
     );
 }
-export default blogDetailS;
+export default BlogDetails;

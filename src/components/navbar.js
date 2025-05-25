@@ -4,12 +4,11 @@ const Navbar = () => {
         <nav className="navbar">
             <h2>Blog post</h2>
             <div>
-                <Link to="/">home</Link>
-                 <Link to="/CREATE">NEWBLOG</Link>
+                <Link to="/">HOME</Link>
+                 <Link to="/Create">NEWBLOG</Link>
                  <Link to="/NOTFOUND">NOTFOUND</Link>
-                 <Link to="BLOGDETAIL">BLOGDETAIL</Link>
+                 <Link to="/Blog-details/:id">BLOGDETAIL</Link>
             </div>
-
         </nav>
     );
 }

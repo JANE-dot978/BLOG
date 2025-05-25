@@ -1,40 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/navbar';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from './components/navbar'
 import Home from './components/Home';
 import Create from './components/Create';
 import NotFound from './components/NotFound';
-import BlogDetails from './components/blogdetail';
-// import NotFound from './components/NotFound';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
     <Router>
-    <div className='App'>
-      <Navbar/>
-      <div className='content'>
+      <div className='App'>
+        <Navbar/>
+        <div className='content'>
+          <Switch>
+            <Route exact path="/">
+            <Home/>
+            </Route>
 
-        <Switch>
-          <Route exact path="/">
-          <Home/>
-          </Route>
+            <Route path="/create">
+            <Create/>
+            </Route>
 
-          <Route path="/Create">
-          <Create/>
-          </Route>
+            {/* <Route path="/Blog-details/:id">
+            <BlogDetails/>
+            </Route> */}
 
-          <Route path="/Blog-details/:id">
-          <BlogDetails/>
-          </Route>
+            <Route path="*">
+              <NotFound/>
+            </Route>
 
-          <Route path="*">
-            <NotFound/>
-          </Route>
-        </Switch> 
+          </Switch>
+        </div>
       </div>
-      </div>
-      </Router>
+    </Router>
   );
 }
 
